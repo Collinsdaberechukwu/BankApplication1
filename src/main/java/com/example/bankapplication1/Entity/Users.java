@@ -1,6 +1,8 @@
 package com.example.bankapplication1.Entity;
 
 import com.example.bankapplication1.Enum.Gender;
+import com.example.bankapplication1.dto.UserDto;
+import com.example.bankapplication1.dtoConverter.MapDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,4 +40,17 @@ public class Users {
     private LocalDateTime createdAt;
     @UpdateTimestamp
     private LocalDateTime modifiedAt;
+
+    public Users(MapDto userDto) {
+        this.firstName = userDto.getFirstName();
+        this.lastName = userDto.getLastName();
+        this.otherName = userDto.getOtherName();
+        this.email = userDto.getEmail();
+        this.phoneNumber = userDto.getPhoneNumber();
+    }
+
+
+//    public Users(UserDto userDto) {
+//        firstName
+//    }
 }
