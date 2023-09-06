@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 //@RequiredArgsConstructor
 @Service
-public class UsersImplementation implements UserService {
+public class BanksImplement implements UserService {
     private final UsersRepository usersRepository;
 
 
-    public UsersImplementation(UsersRepository usersRepository)throws RuntimeException {
+    public BanksImplement(UsersRepository usersRepository)throws RuntimeException {
         this.usersRepository = usersRepository;
 //        this.repos = repos;
     }
